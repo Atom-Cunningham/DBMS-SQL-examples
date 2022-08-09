@@ -1,0 +1,25 @@
+Id, name, retailPrice, category, membershipDiscount, quantity
+2301, Iphone 11, 799.99, Electronics, 39.99, 21
+4527, Mouse, 25.00, Electronics, .00, 51
+7492, Television, 199.99, Electronics, 19.99, 3
+5984, SD Card, 6.99, Electronics, 1.75, 20
+6189, Red Shirt, 15.99, Clothing, 1.99, 32
+1817, Jeans, 17.99, Clothing, 1.99, 4
+803, Running Shoes, 39.99, Clothing, 1.99, 12
+7229, Christmas Socks, 6.99, Clothing, 1.99, 42
+6490, Pot and Pan Set, 49.99, Home, 2.50, 8
+2485, Microwave, 120.99, Home, 24.99, 4
+6483, Popcorn Machine, 99.99, Home, 4.99, 5
+1483, French Press, 14.99, Home, 0.00, 12
+2348, Football, 9.99, Sports & Outdoor, 1.99, 23
+4357, Treadmill, 499.99, Sports & Outdoor, 49.99, 2
+5429, Lantern, 29.99, Sports & Outdoor, 0.00, 5
+2483, Kayak, 299.99, Sports & Outdoor, 34.99, 1
+5397, Hair Dryer, 41.88, Beauty, 4.99, 7
+4397, Makeup Collection, 23.99, Beauty, 2.99, 13
+6392, Bath Bomb, 3.99, Beauty, 1.99, 36
+4398, Hairbrush, 5.99, Beauty, 0.00, 23
+7820, Sewing Machine, 154.99, Crafts, 29.99, 4
+9432, Paint Kit, 12.99, Crafts, 0.00, 34
+3652, Scrapbook, 11.99, Crafts, 2.99, 8
+5893, Playdough, 1.99, Crafts, 0.00, 40

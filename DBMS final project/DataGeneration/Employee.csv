@@ -1,0 +1,19 @@
+firstName, lastName, gender, address, phoneNumber, groupType, salary
+0,Macauley, Dawson, Male, "1209 W Hadley St #50, Tucson, AZ 85705", 520-277-8935, sales, 34000
+0,Patrycja, Lozano, Female, "10963 N Pomegranate Dr, Tucson, AZ 85737", 520-279-6723, sales, 34000
+0,Theon, Iles, Male, "7731 Cypress Ave., Tucson, AZ 85745", 520-282-8785, sales, 34000
+0,Chelsey, Oconnell, Female, "3 S. High Point St., Tucson, AZ 85705", 520-284-3820, stock, 22000
+0,Margie, Frederick, Female, "7 Andover St., Tucson, AZ 85748", 520-286-2091, sales, 36000
+0,Umer, Moody, Male, "56 Middle St., Tucson, AZ 85715", 520-288-0260, manager, 43000
+0,Huzaifa, Doherty, Male, "818 W. La Sierra Rd., Tucson, AZ 85712", 520-289-4008, stock, 22000
+0,Sapphire, Whitehouse, Female, "7533 Lilypad Street, Tucson, AZ 85719", 520-290-4043, stock, 22000
+0,Jane, Armstrong, Female, "39 Henry Smith Dr., Tucson, AZ 85737", 520-291-9786, stock, 22000
+0,Jadene, Turnbull, Female, "939C East Richardson St., Tucson, AZ 85749", 520-292-5194, sales, 34000
+0,Syeda, Esparza, Female, "94 South Lawn Street, Tucson, AZ 85743", 520-293-8791, manager, 43000
+0,Rhyley, Heath, Male, "2 Race St., Tucson, AZ 85705", 520-294-6129, sales, 34000
+0,Isabell, Velasquez, Female, "95 S. Southampton St., Tucson, AZ 85710", 520-295-1102, sales, 34000
+0,Mea, Atkinson, Female, "8 Birch Hill Dr., Tucson, AZ 85747", 520-296-3738, sales, 34000
+0,Giovanni, Vazquez, Male, "13 Argyle Avenue, Tucson, AZ 85730", 520-297-7362, stock, 22000
+0,Ashlyn, Berg, Female, "45 Cannon Drive, Tucson, AZ 85747", 520-298-4154, sales, 34000
+0,Lisa, Hodge, Female, "708 Pumpkin Hill Dr., Tucson, AZ 85735", 520-299-8403, stock, 22000
+0,Marco, Leblanc, Male, "70C Innovation St., Tucson, AZ 85743", 520-300-5074, stock, 23000

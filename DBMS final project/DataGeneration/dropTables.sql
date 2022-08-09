@@ -1,0 +1,11 @@
+DROP SEQUENCE supply_sequence;
+DROP SEQUENCE employee_sequence;
+DROP SEQUENCE member_sequence;
+DROP SEQUENCE supplier_sequence;
+DROP TABLE employee;
+DROP TABLE member;
+DROP TABLE sale;
+DROP TABLE subsale;
+DROP TABLE supplier;
+DROP TABLE supply;
+DROP TABLE product;
