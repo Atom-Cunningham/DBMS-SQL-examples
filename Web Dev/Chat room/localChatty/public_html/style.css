@@ -1,0 +1,38 @@
+body{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+#chat{
+    position: absolute;
+    top: 0;
+
+    height: 70%;
+    width: 100%;
+
+    color: black;
+    background: aquamarine;
+}
+
+#input{
+    padding-left: 5%;
+    position: absolute;
+    bottom: 0;
+
+    height: 30%;
+    width: 100%;
+    display: inline-block;
+
+    background-color: black;
+}
+
+#alias, #message {
+    display: inline-block;
+    font-family: monospace;
+    color: white;
+}
+
+#aliasInput, #messageInput{
+    display: inline-block;
+    color: black;
+}

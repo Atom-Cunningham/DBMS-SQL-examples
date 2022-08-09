@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+    Adam Cunningham
+    csc337
+    project 8, chatty
+    the html for a chat application to be used on an
+    online server.
+    divided into two main sections,
+    the chat area, which is updated by information sent
+    from the server
+    and an input section which contains two input fields
+    and a send button
+    send button calls a post request to the server.
+    runs a script that is constantly pinging the server
+    for new information
+-->
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <script src="/code.js"></script>
+        <title>Chatty</title>
+    </head>
+    <body>
+        <div id="chat">
+            
+        </div>
+        <div id="input">
+            <div id="aliasBox">
+                <p id="alias">Alias: </p>
+                <input id="aliasInput"></textarea>
+            </div>
+            <div id="messageBox">
+                <p id="message">Message: </p>
+                <input id="messageInput"></textarea>
+            </div>
+            <button id="sendButton" onclick="sendMessage();">
+                Send Message
+            </button>
+        </div>
+    </body>
+</html>
