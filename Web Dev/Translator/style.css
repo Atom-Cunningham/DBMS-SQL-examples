@@ -1,0 +1,65 @@
+/*
+csc 337
+project7
+Adam Cunningham
+css sheet for index.html
+this css sheet stylizes the translation page
+it trisects the page into a header,
+a textbox on the left, and a textbox on the right
+*/
+
+#header {
+    margin: 0 0 0 0;
+    padding-top: 5%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 20%;
+    width: 100%;
+    background-color: orange;
+    
+    text-align: center;
+    color: black;
+    font-size: xx-large;
+    font-family: Arial;
+}
+
+#input {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 80%;
+    width: 50%;
+
+    
+    background-color: aliceblue;
+    border: 2px solid black;
+}
+
+#output {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 80%;
+    width: 50%;
+
+    background-color: aliceblue;
+    border: 2px solid black;
+}
+
+#inputLanguage, #outputLanguage, #inputText, #outputText {
+    position: fixed;
+    margin: 10%;
+}
+
+#inputText, #outputText {
+    height: 20%;
+    width: 30%;
+    font-size: 20px;
+}

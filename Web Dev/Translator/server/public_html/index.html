@@ -1,0 +1,50 @@
+<!--
+    Translator
+    csc337 project 7
+    Adam Cunnningham
+    This is the html for a translation app,
+    similar to google translate
+
+    the user can select an input language,
+    select an output language
+    type input text, and the text will
+    be translated to the specified language and
+    displayed on the screen
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <title>Translator</title>
+    </head>
+    <body>
+        <h1 id="header">Translator</h1>
+        <div id="input">
+            <select name="inputLanguage" id="inputLanguage"
+            onchange="changeInputLanguage();">
+                <option value="e">English</option>
+                <option value="s">Spanish</option>
+                <option value="g">German</option>
+            </select>
+            </br>
+            <!--inputDummy is for replacing during static response-->
+            <textarea id="inputText" class="input" type="text"
+             oninput = "updateOutput();" >dummyInput</textarea>
+        </div>
+        <div id="output">
+            <select name="outputLanguage" id="outputLanguage"
+            onchange="changeOutputLanguage();">
+                <option value="e">English</option>
+                <option value="s">Spanish</option>
+                <option value="g">German</option>
+            </select>
+            </br>
+            <!--outputDummy is for replacing during static response-->
+            <textarea id="outputText" class="output" type="text"
+            defaultValue="?">dummyOutput</textarea>
+        </div>
+    </body>
+    <script src="functions.js"></script>
+</html>
