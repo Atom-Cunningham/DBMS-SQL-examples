@@ -1,0 +1,3 @@
+CREATE TABLE laser.2012 (state VARCHAR2(255) NOT NULL, jurisdiction_type VARCHAR2(255) NOT NULL, county_name VARCHAR2(255) NOT NULL, municipality VARCHAR2(255) NOT NULL, precinct_name VARCHAR2(255) NOT NULL, precinct_id VARCHAR2(255) NOT NULL, name VARCHAR2(255) NOT NULL, address VARCHAR2(255) NOT NULL, PRIMARY KEY (precinct_id));
+
+create table laser.2012 (state VARCHAR2(255));

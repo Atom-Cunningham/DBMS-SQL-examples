@@ -1,0 +1,272 @@
+Adam Cunningham
+Netid Laser
+
+
+1. What are the names of all of the red fish?
+
+select fname
+from mccann.fish
+where fcolor = 'red';
+
+
+FNAME
+----------
+albert
+george
+jill
+kilroy
+
+
+2. What are the colors of all of the tanks named “lagoon”?
+
+select tcolor
+from mccann.tank
+where tname = 'lagoon';
+
+TCOLOR
+------
+red
+green
+
+
+3. What is the Cartesian Product of the sname field from
+Species with the tname field from Tank? List
+each (sname,tname) pair only once.
+
+select distinct *
+from (select sname,tname
+from (select *
+from mccann.species, mccann.tank));
+
+SNAME      TNAME
+---------- ----------
+shark      puddle
+shark      cesspool
+shark      lagoon
+shark      beach
+guppy      lagoon
+dolphin    beach
+dolphin    lagoon
+guppy      puddle
+guppy      cesspool
+dolphin    cesspool
+dolphin    puddle
+
+SNAME      TNAME
+---------- ----------
+guppy      beach
+
+
+4. What are the colors of the sharks (in alphabetical order)?
+
+select fcolor
+from mccann.species, mccann.fish
+where species.sno = fish.sno
+and sname = 'shark'
+order by fcolor;
+
+FCOLOR
+------
+blue
+orange
+purple
+red
+white
+white
+white
+
+
+
+5. What is the name of the heaviest fish?
+
+select fname
+from (select max(fweight) wt from mccann.fish), mccann.fish
+where fweight=wt;
+
+
+FNAME
+----------
+darron
+
+
+6. What are the names of the fish that are sharks
+and live in cesspools?
+
+select fname
+from mccann.fish, mccann.tank, mccann.species
+where fish.sno=species.sno
+and fish.tno=tank.tno
+and species.sname='shark'
+and tank.tname='cesspool';
+
+FNAME
+----------
+darron
+george
+elsie
+killer
+bonnie
+charlie
+
+7. The database contains names of species, tanks, and fish. 
+Display a result containing all of these names.
+
+select sname names
+from mccann.species
+union
+select tname
+from mccann.tank
+union
+select fname
+from mccann.fish;
+
+NAMES
+----------
+albert
+beach
+bonnie
+cesspool
+charlie
+cory
+darron
+dolphin
+elsie
+flipper
+fran
+
+NAMES
+----------
+george
+guppy
+helen
+indira
+jill
+killer
+kilroy
+lagoon
+laura
+maureen
+puddle
+
+NAMES
+----------
+shark
+
+8. What are the names of species found in puddles?
+
+select sname
+from mccann.species, mccann.tank, mccann.fish
+where tank.tname = 'puddle'
+and fish.sno = species.sno
+and fish.tno = tank.tno;
+
+SNAME
+----------
+guppy
+guppy
+dolphin
+
+
+9. What are the names of species that are found in the 
+same tank with a shark? List each species name
+only once in the result.
+
+select distinct sname
+from mccann.fish, mccann.species, (
+	select tank.tno
+	from mccann.tank, mccann.fish, mccann.species
+	where sname='shark'
+	and fish.sno=species.sno
+	and fish.tno=tank.tno) t
+where fish.tno = t.tno
+and fish.sno=species.sno;
+
+
+SNAME
+----------
+shark
+dolphin
+guppy
+
+10. What are the names of the fish that have been born and are swimming?
+
+select fname
+from mccann.fish, mccann.event
+where enote='Swimming'
+and fish.fno=event.fno
+intersect
+select fname
+from mccann.fish, mccann.event
+where enote='Born'
+and fish.fno=event.fno;
+
+
+FNAME
+----------
+flipper
+
+
+11. What are the names of the fish that have been born but are NOT swimming?
+
+
+select fname
+from mccann.fish, mccann.event
+where enote='Born'
+and fish.fno=event.fno
+minus
+select fname
+from mccann.fish, mccann.event
+where enote='Swimming'
+and fish.fno=event.fno;
+
+FNAME
+----------
+albert
+indira
+jill
+laura
+maureen
+
+
+12. What are the colors of the fish and the average weight of the fish 
+of each color? Include in your result only those colors 
+(with the associated average weights, of course) that
+have an average group weight under 40, and list the results in 
+descending order by weight.
+
+select fcolor, avg(fweight) average_weight
+from mccann.fish
+group by fcolor
+having avg(fweight) < 40
+order by average_weight desc;
+
+
+FCOLOR AVERAGE_WEIGHT
+------ --------------
+red             38.75
+black              35
+orange           19.5
+purple             12
+
+13. What are the names of the species that eat herring
+that have a representative in all green tanks?
+
+select sname
+from (
+	select	 distinct sno
+	from	 mccann.fish, mccann.tank
+	where	 fish.tno = tank.tno and tank.tcolor = 'green'
+	group by sno
+	having 	 count(distinct tank.tno)=
+		    ( select count(distinct tno)
+  	              from mccann.tank
+    	              where tcolor = 'green'
+     		    )
+     ) have_reps, mccann.species
+where have_reps.sno = species.sno
+and species.sfood = 'herring';
+
+
+SNAME
+----------
+dolphin
