@@ -1,0 +1,64 @@
+<!--
+    Adam Cunningham
+Final project
+csc337 web programming
+connect 4
+summer 2020
+
+the login page,
+contains a place for the user to log in,
+and for the creation of accounts
+
+login redirects to the lobby
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="/code.js"></script>
+        <title>Connect 4</title>
+    </head>
+    <body>
+        <!--section for logging in as existing user-->
+        <div id="header">
+            <h1>
+                Welcome to the Connect4verse!
+            </h1>
+            The best place to play connect four in the universe
+        </div>
+        <p id="loginMessage">Login or create an account</p>
+        <div id="userLogin">
+            <h1>Login</h1>
+            <label for="usernameLogin" class="label">Username</label>
+            <input id="usernameLogin" class="field"></input>
+            <br>
+            <br>
+            <label for="passwordLogin" class="label">Password</label>
+            <input id="passwordLogin" type="password" class="field"></input>
+
+            <br/>
+            <button id="login" class="button" onclick="login();">
+                Login
+            </button>
+        </div>
+        <!--section for entering user information-->
+        <div id="createAccount">
+            <h1>Create Account</h1>
+            <label for="username" class="label">Username</label>
+            <input id="username" class="field"></input>
+            <br>
+            <br>
+            <label for="password" class="label">Password</label>
+            <input id="password" type="password" class="field"></input>
+
+            <br/>
+            <button id="create" class="button" onclick="addUser();">
+                Create Account
+            </button>
+        </div>
+        <a id="help" href="help.html">help</a>
+    </body>
+</html>

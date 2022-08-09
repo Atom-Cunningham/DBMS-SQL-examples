@@ -1,0 +1,42 @@
+/*
+Adam Cunningham
+Final project
+csc337 web programming
+connect 4
+summer 2020
+
+controls the header
+and the login page, as well as the
+help page
+*/
+
+body{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    background-color: aliceblue;
+}
+
+#header{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-family: monospace;
+    color: rgb(201, 71, 54);
+    background-color: rgb(175, 175, 255);
+    text-align: center;
+}
+
+#loginMessage {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#userLogin,#createAccount {
+    padding-left: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#help{
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+}

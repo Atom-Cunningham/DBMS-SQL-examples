@@ -1,0 +1,35 @@
+<!--
+Adam Cunningham
+Final project
+csc337 web programming
+connect 4
+summer 2020
+
+this page is the lobby,
+where players can create or join games.
+it holds a table of valid games to join
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="homeStyle.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="/homeCode.js"></script>
+        <title>Connect 4</title>
+    </head>
+    <body>
+        <div id="header">
+            <!--welcome message-->
+            <h1>Connect4Verse Game Lobby</h1>
+            <h3>Create a game or join a user's existing game</h3>
+        </div>
+        <button id="create" class="button" onclick="createGame();">
+            Create Game
+        </button>
+        <br>
+        <table id="gameTable">
+        </table>
+        <a id="help" href="help.html">help</a>
+    </body>
+</html>

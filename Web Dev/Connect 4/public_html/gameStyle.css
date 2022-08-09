@@ -1,0 +1,104 @@
+/*
+Adam Cunningham
+Final project
+csc337 web programming
+connect 4
+summer 2020
+
+style for the page where the players play connect4
+importantly turns a table into a game board.
+has a chat box on the left side, a banner on top,
+and a game board in the middle
+*/
+
+body{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+#header{
+    width: 75%;
+    display: inline-flex;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    margin-left: 25%;
+    font-family: monospace;
+    color: rgb(83, 2, 59);
+    background-color: rgb(175, 175, 255);
+}
+
+#player1{
+    color: red;
+    margin-left: 40%;
+}
+
+#player2{
+    color: yellow;
+}
+
+#gameOver{
+    font-size: large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 25%;
+}
+
+#chatBox {
+    position: fixed;
+    text-align: left;
+    font-family: monospace;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 25%;
+    border: 2px solid black;
+    background-color: rgb(185, 201, 253);
+}
+
+#send {
+    margin-bottom: 10px;
+}
+
+#messageInput{
+    width: 95%;
+}
+
+
+#board {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    margin-left: 30%;
+    margin-top: 5%;
+    margin-bottom: 20%;
+    border: 1px solid black;
+    background-color: black;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+tr { 
+    display: block; float: left; 
+}
+
+td { 
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 66.6px;
+    width: 52px;
+    display: block; 
+}
+td { 
+    
+    display: block; 
+    }
+
+    
+#help{
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+}
